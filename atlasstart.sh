@@ -1,4 +1,4 @@
-#Start up all of the Atlassian tools
+#Start up FishEye and Stash
 
 current="$(pwd)"
 
