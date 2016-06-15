@@ -1,4 +1,4 @@
-#Start up all of the Atlassian tools
+#Start up FishEye and Bitbucket
 
 current="$(pwd)"
 
@@ -27,40 +27,14 @@ current="$(pwd)"
 
 #Stash
 	sudo -u stash 
-	cd /opt/Atlassian/stash/atlassian-stash-3.8.0/bin 
+	cd /opt/Atlassian/stash/atlassian-bitbucket-4.6.1/bin 
 		echo "$current"
 		echo
 		read -p "We will now start Stash - Press any key to continue"
 		echo
-		sh start-stash.sh
+		sh start-bitbucket.sh
 		echo
 	sleep 15
-
-#Confluence
-
-#	cd ~/Documents/Atlassian/Conf/atlassian-confluence-5.6.5/bin/
-#		echo
-#		read -p "We will now start Confluence - Press any key to continue"
-#		echo
-#		sh start-confluence.sh
-#		echo
-#	sleep 15
-
-##Confirmation that the services are running
-
-#JIRA
-
-#	PID=`ps aux | grep java | grep jira | awk '{print $2}'`
-#        	if test -z $PID
- #       	then
-#        		echo "JIRA is down..."
- #       	else
-  #      		echo "JIRA running... PID $PID"
-   #     	fi
-
-#	sleep 5
-
-#FishEye
 
 	PID=`ps aux | grep java | grep fisheye | awk '{print $2}'`
         	if test -z $PID
@@ -74,22 +48,14 @@ current="$(pwd)"
 
 #Stash
 
-	PID=`ps aux | grep java | grep stash | awk '{print $2}'`
+	PID=`ps aux | grep java | grep -i bitbucket | awk '{print $2}'`
         	if test -z $PID
         	then
-        		echo "Stash is down..."
+        		echo "Bitbucket is down..."
         	else
-        		echo "Stash is running... PID $PID"
+        		echo "Bitbucket is running... PID $PID"
         	fi
 
 	sleep 5
 
-#Confluence
 
-#	PID=`ps aux | grep java | grep confluence | awk '{print $2}'`
- #       	if test -z $PID
-  #      	then
-   #     		echo "Confluence is down..."
-    #    	else
-     #   		echo "Confluence is running... PID $PID"
-        	#fi
