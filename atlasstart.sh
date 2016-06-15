@@ -1,4 +1,4 @@
-#Start up FishEye and Stash
+#Start up FishEye and Bitbucket
 
 current="$(pwd)"
 
@@ -27,12 +27,12 @@ current="$(pwd)"
 
 #Stash
 	sudo -u stash 
-	cd /opt/Atlassian/stash/atlassian-stash-3.8.0/bin 
+	cd /opt/Atlassian/stash/atlassian-bitbucket-4.6.1/bin 
 		echo "$current"
 		echo
 		read -p "We will now start Stash - Press any key to continue"
 		echo
-		sh start-stash.sh
+		sh start-bitbucket.sh
 		echo
 	sleep 15
 
@@ -48,12 +48,12 @@ current="$(pwd)"
 
 #Stash
 
-	PID=`ps aux | grep java | grep stash | awk '{print $2}'`
+	PID=`ps aux | grep java | grep -i bitbucket | awk '{print $2}'`
         	if test -z $PID
         	then
-        		echo "Stash is down..."
+        		echo "Bitbucket is down..."
         	else
-        		echo "Stash is running... PID $PID"
+        		echo "Bitbucket is running... PID $PID"
         	fi
 
 	sleep 5
