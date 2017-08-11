@@ -41,7 +41,7 @@ current="$(pwd)"
        		then
         		echo "FishEye is down..."
         	else
-        		echo "FishEye is running... PID $PID"
+        		echo "FishEye is up and running... PID $PID"
         	fi
 
 	sleep 5
