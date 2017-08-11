@@ -7,7 +7,7 @@ current="$(pwd)"
 #	cd ~/Documents/Atlassian/Jira6.3/atlassian-jira-6.3.3-standalone/bin/
 #		echo "$current"
 #		echo
-#		read -p "We will now start JIRA - Press any key to continue"
+#		read -p "We start JIRA now - Press any key to continue"
 #		echo
 #		sh start-jira.sh
 #		echo
