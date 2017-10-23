@@ -15,8 +15,8 @@ current="$(pwd)"
 
 #FishEye
 	sudo -u fisheye
-	echo $USER	
-	cd /opt/Atlassian/fisheye/fecru-3.8.0/bin 
+	echo $USER
+	cd /opt/Atlassian/fisheye/fecru-3.8.0/bin
 		echo "$current"
 		echo
 		read -p "We will now start FishEye - Press any key to continue"
@@ -26,8 +26,8 @@ current="$(pwd)"
 	sleep 15
 
 #Stash
-	sudo -u stash 
-	cd /opt/Atlassian/stash/atlassian-bitbucket-4.6.1/bin 
+	sudo -u stash
+	cd /opt/Atlassian/stash/atlassian-bitbucket-4.6.1/bin
 		echo "$current"
 		echo
 		read -p "We will now start Stash - Press any key to continue"
@@ -57,5 +57,3 @@ current="$(pwd)"
         	fi
 
 	sleep 5
-
-
